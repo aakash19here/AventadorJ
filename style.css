@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* body */
+body{
+    font-family: 'Lato', sans-serif;
+    color: white;
+}
+
+/* Main */
+main{
+    background-color: black;
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(
+        to left top,
+        black,
+        rgba(128, 128, 128, 0.212)
+        
+        
+    ); 
+    position: relative;
+}
+
+/* Logo alignment */
+.logo{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    padding-top: 20px ;
+    padding-left: 20px;
+}
+.logo img{
+    width: 100px;
+    height: 100px;
+} 
+
+/* Menu-Bar */
+.menu-bar{
+    height: 10vh;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    animation-name: moveFromUp;
+    animation-duration: 1.5s;
+    align-items: center;
+    width: 60%;
+    top: 0%;
+    left: 20%;
+}
+.menu-bar p{
+    text-transform: uppercase;
+    font-weight: 400;
+    font: 2em;
+}
+
+/* Menu -Btn */
+.ham-burger{
+    position: absolute;
+    right: 0%;
+    top: 0%;
+    padding-top: 20px;
+    padding-right: 20px;
+}
+.ham-burger img{
+    width: 50px;
+    height: 50px;
+}
+
+/* Information about car*/
+.info{
+    animation-name: moveFromLeft;
+    animation-duration: 1.5s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 50vh;
+    width: 11%;
+    position: absolute;
+    left: 0%;
+    margin-left: 2%;
+    top: 20%;
+
+}
+
+.bold{
+    font-size: 2em;
+    font-weight: 800;
+}
+
+/* LAMBO */
+.lambo{
+    position: absolute;
+    align-items: center;
+    justify-content: flex-start;
+    top: 15%;
+    height: 30vh;
+    width: 65%;
+    font-family: 'Roboto Condensed', sans-serif;
+    left: 25%;
+    display: flex;
+    flex-direction: column;    
+}
+.lambo .company{
+    letter-spacing: 4px;
+    line-height: 100px;
+    font-size: 2em;
+    font-weight: 100;
+    font-family: 'Poppins', sans-serif;
+    color: gray;
+}
+.lambo .heading{
+    font-size: 6em;
+    font-weight: 100;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 30px;
+    color: white;
+}
+
+/* Main Image :D */
+.lambo-image{
+    position: absolute;
+    animation-name: display;
+    animation-duration: 1.3s;
+    bottom:5%;
+    left: 15%;
+}
+.lambo-image img{
+    width: 90%;
+}
+
+/* Adding Animations */
+@keyframes moveFromUp{
+    0%{
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveFromLeft{
+    0%{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+@keyframes display{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
